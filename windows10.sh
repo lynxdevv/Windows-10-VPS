@@ -1,12 +1,12 @@
-echo "Download windows files"
-wget -O w10x64.vhdx https://bit.ly/2Ys4Uh5
 echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3388 &>/dev/null &
-echo Downloading File From akuh.net
+echo Setting Up
+echo "Download windows files"
+wget -O w10x64.vhdx https://bit.ly/2Ys4Uh5
 apt-get install qemu
 echo "Wait"
 echo "Starting Windows"
